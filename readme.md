@@ -76,4 +76,21 @@ Es ist sinnvoll das Interface um die üblichen CRUD Operationen zu erweitern.
    
 ### Gibt es eine dedizierte Reihenfolge beim Aufruf der Methoden des Interfaces?
 
-Ja es gibt eine dedizierte Reihenfolge beim Aufrufen der Methoden des Interfaces wie in der Spezifikation beschrieben. Zunächst muss eine Session mittels openConnection() eröffnet werden. Daraufhin können mittels der oben beschriebenen CRUD-Operationen die Daten ausgegeben und manipuliert werden. ***Das Ausgeben und Manipulieren der Daten kann aus Sicht des Interfaces in beliebiger Reihenfolge passieren.*** Abschließend muss mit closeConnection() die Verbindung wieder geschlossen werden.
+Ja es gibt eine dedizierte Reihenfolge beim Aufrufen der Methoden des Interfaces wie in der Spezifikation beschrieben.
+Zunächst muss eine Session mittels openConnection() eröffnet werden.
+Daraufhin können mittels der oben beschriebenen CRUD-Operationen die Daten ausgegeben und manipuliert werden.
+***Das Ausgeben und Manipulieren der Daten kann aus Sicht des Interfaces in beliebiger Reihenfolge passieren.*** Abschließend muss mit closeConnection() die Verbindung wieder geschlossen werden.
+
+## Implementierungsfragen FA2
+
+### Ist die Schnittstelle Caching hinreichend modelliert oder fehlen auch hier Methoden?
+
+Die modellierte Schnittstelle Caching ist nicht ausreichend modelliert.
+Das Modell zeigt lediglich die Ausgabe des Cacheeintrages, nicht jedoch das Erstellen und Löschen eines Eintrags, sowie das Updaten eines Eintrags.
+
+## Implementierungsfragen FA5
+
+### Achten Sie auch darauf, dass der Datenbank-Treiber in dem JAR-File vorhanden ist (was passiert, wenn dies nicht der Fall ist?)
+
+Wenn der Datenbank-Treiber im JAR-File fehlt, kann keine Verbindung zur Datenbank hergestellt werden.
+Es kommt zu einem Fehler da der Treiber nicht geladen werden kann.
