@@ -1,4 +1,8 @@
-Die Abgaben sind in den jeweiligen Branches.
+Abgaben in den Branches:
+
+uebung1_sourcecode: Dieser Branch enthält den Quellcode, welcher noch nicht in JAR-Dateien ausgelagert wurde.
+uebung1_jar_files: Dieser Branch beinhaltet die Testumgebung mit den in jeweils einzeln in .jar verpackten Cache und ProduktionsManagement Komponenten.
+
 
 # Aufgabe 1
 
